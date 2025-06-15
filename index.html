@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="h1">
+        <div>Photo Gallery</div>
+        <button id="themeToggle">Switch to Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="box">
+            <figure>
+                <img src="dp.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-1</figcaption>
+            </figure>
+            <figure>
+                <img src="dp1.png" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-2</figcaption>
+            </figure>
+            <figure>
+                <img src="dp2.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-3</figcaption>
+            </figure>
+            <figure>
+            <img src="dp3.png" alt="thumb" onclick="openLightbox(this.src)">
+            <figcaption>IMAGE-4</figcaption>
+            </figure>
+            <figure>
+                <img src="dp4.png" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-5</figcaption>
+            </figure>
+            <figure>
+                <img src="dp5.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-6</figcaption>
+            </figure>
+            <figure>
+                <img src="dp6.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-7</figcaption>
+            </figure>
+            <figure>
+                <img src="dp7.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-8</figcaption>
+            </figure>
+            <figure>
+                <img src="dp8.png" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-9</figcaption>
+            </figure>
+            <figure>
+                <img src="dp9.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-10</figcaption>
+            </figure>
+            <figure>
+                <img src="dp10.png" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-11</figcaption>
+            </figure>
+            <figure>
+                <img src="dp11.jpg" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-12</figcaption>
+            </figure>
+            <figure>
+                <img src="dp12.png" alt="thumb" onclick="openLightbox(this.src)">
+                <figcaption>IMAGE-13</figcaption>
+            </figure>
+        </section>
+
+        <div class="lightbox" onclick="this.style.display='none'">
+            <img src="" id="lightbox-img">
+        </div>
+    </main>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.querySelector(".lightbox").style.display = "flex";
+        }
+
+        const toggleButton = document.getElementById('themeToggle');
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                toggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+</body>
+
+</html>
