@@ -56,7 +56,7 @@ main {
 .h1 {
   background-color: white;
   color: #913fe2;
-  min-height: 8vh;
+  min-height: 4vh;
   border: 4px solid #279aeb;
   padding-left: 10px;
   border-radius: 4px;
@@ -134,13 +134,7 @@ img:hover {
   align-self: center;
 }
 
-button:active {
-  background: olive;
-}
 
-button:focus {
-  background: green;
-}
 
 #themeToggle {
   padding: 6px 14px;
